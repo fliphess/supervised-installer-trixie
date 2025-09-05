@@ -1,6 +1,6 @@
 Package: homeassistant-supervised
 Section: base
-Version: 3.1.0
+Version: 3.1.1
 Priority: optional
 Architecture: all
 Pre-Depends: curl, bash, docker-ce, dbus, network-manager, apparmor, jq, systemd, systemd-timesyncd, os-agent, systemd-journal-remote, systemd-resolved
@@ -12,4 +12,3 @@ Description: Home Assistant Supervised
  This means, all components from the Home Assistant method are used, except for the Home Assistant Operating System.
  This system will run the Home Assistant Supervisor. The Supervisor is not just an application, it is a full appliance that manages the whole system.
  It will clean up, repair or reset settings to default if they no longer match expected values.
-
