@@ -13,7 +13,7 @@ warn ""
 # Check if we are running on a supported OS
 BYPASS_OS_CHECK=${BYPASS_OS_CHECK:-false}
 supported_os_id="debian"
-supported_os_version_id=("12")
+supported_os_version_id=("13")
 
 source /etc/os-release
 os_supported=false
@@ -54,7 +54,7 @@ if [[ "$(sysctl --values kernel.dmesg_restrict)" != "0" ]]; then
     echo "kernel.dmesg_restrict=0" >> /etc/sysctl.conf
 fi
 
-# If the hassio_supervisor service is running or exists, stop it 
+# If the hassio_supervisor service is running or exists, stop it
 if [[ "$(systemctl is-active hassio-supervisor.service)" == "active" ]]; then
     info "Stopping hassio_supervisor service"
     systemctl stop hassio-supervisor.service
